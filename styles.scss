@@ -35,28 +35,6 @@
   }
 }
 
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 body,
 html {
   font-family: "Poppins";
@@ -77,7 +55,6 @@ header {
   width: 100%;
   background-color: #fff;
   text-align: right;
-
   nav {
     display: flex;
     justify-content: space-between;
@@ -112,7 +89,8 @@ header {
 
     &:last-child {
       border-radius: 1rem;
-      box-shadow: 0px 0px 8px 2px rgba(241, 241, 241, 0.75) inset;
+      padding: 8px 16px;
+      box-shadow: 0px 6px 5.2px 0px #00000014 inset;
     }
   }
 
@@ -120,7 +98,6 @@ header {
     color: black;
     text-decoration: none;
   }
-
   @media (max-width: 1400px) {
     height: auto;
     nav {
@@ -222,11 +199,18 @@ header {
 .title {
   display: flex;
   justify-content: center;
-  font-size: 100px;
+  font-size: 160px;
+  font-weight: 800;
+  height: 213px;
+  background: linear-gradient(
+    135.69deg,
+    rgba(90, 94, 157, 1) -46.68%,
+    rgba(197, 239, 238, 1) 87.12%
+  );
 
-  @media (max-width: 820px) {
-    text-align: center;
-  }
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 #introduction {
@@ -322,7 +306,11 @@ header {
 
   .company-icon {
     position: relative;
-    left: 320px;
+    left: 315px;
+
+    &:hover {
+      animation: jello-horizontal 0.9s both;
+    }
   }
 
   .subtitle {
@@ -426,8 +414,9 @@ header {
         align-items: center;
       }
     }
-    
-    .div1, .div5 {
+
+    .div1,
+    .div5 {
       display: none;
     }
   }
@@ -439,14 +428,15 @@ header {
       }
     }
 
-
     .welcome-to-esquare {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    h1, h2, p {
+    h1,
+    h2,
+    p {
       text-align: center;
     }
   }
@@ -483,17 +473,140 @@ header {
       }
     }
   }
-
-  // @media () {}
+  .pic {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
 
-.pic {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  img {
-    width: 150px;
-    height: 150px;
+#aboutUs {
+  margin-top: 100px;
+  position: relative;
+  padding-block: 140px;
+  background: linear-gradient(0deg, #ebfbfb 0%, #e9eaf2 78.5%, #c9cadf 100%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/assets/backgrounds/clients-aboutus-background.png")
+      no-repeat center center;
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+
+  .title {
+    background: linear-gradient(
+      141.25deg,
+      rgba(90, 94, 157, 0.2) 24.97%,
+      rgba(197, 239, 238, 0.2) 151.45%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 150px;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    max-width: 65rem;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+    padding: 0 30px;
+  }
+
+  .carousel {
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    gap: 15px;
+    // justify-content: center;
+    position: relative;
+  }
+
+  .card {
+    display: flex;
+    flex: 0 0 auto;
+    width: calc((100% - 60px));
+    justify-content: space-between;
+    height: 467px;
+    padding: 56px 0 56px 56px;
+    border-radius: 32px;
+    background: #ffffff;
+    box-shadow: 5px 5px 4px 0px #282a7f40;
+
+    &:focus {
+      box-shadow: 5px 5px 27px 0px #35dcd859;
+    }
+
+    .content-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+
+      h3 {
+        color: #282a7f;
+        font-size: 20px;
+        font-weight: 600px;
+        line-height: 30px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 24px;
+        font-weight: 275;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .card-number {
+      display: flex;
+      height: calc(100% + 175px);
+      font-size: 300px;
+      font-weight: 600;
+      align-items: flex-end;
+      color: #282a7f;
+    }
+  }
+
+  button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
   }
 }
 
@@ -541,6 +654,17 @@ header {
     background-size: cover;
     transform: rotate(180deg);
     z-index: -1;
+  }
+
+  .title {
+    background: linear-gradient(
+      141.25deg,
+      rgba(90, 94, 157, 0.2) 24.97%,
+      rgba(197, 239, 238, 0.2) 151.45%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 
   .clients-container {
@@ -725,6 +849,15 @@ header {
           &:required {
             // TODO: Add styles for required fields
           }
+
+          &.error {
+            border-color: red;
+            background-color: #ffe6e6;
+
+            &:focus {
+              border-color: darkred;
+            }
+          }
         }
 
         textarea {
@@ -743,6 +876,13 @@ header {
           &:hover {
             background-color: darken(#007bff, 10%);
           }
+        }
+
+        .error-message {
+          color: red;
+          font-size: 0.8rem;
+          margin-top: 5px;
+          height: 20px;
         }
       }
     }

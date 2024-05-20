@@ -6,8 +6,17 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script src="./main.js" defer></script>
   </head>
+
   <body>
     <header>
       <nav>
@@ -40,17 +49,56 @@
         </div>
 
         <div class="hamburger-menu">
-          <svg class="hamburger-image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+          <svg
+            class="hamburger-image"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 10 10"
+            stroke="#eee"
+            stroke-width=".6"
+            fill="rgba(0,0,0,0)"
+            stroke-linecap="round"
+            style="cursor: pointer"
+          >
             <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
-              <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
-              <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
+              <animate
+                dur="0.2s"
+                attributeName="d"
+                values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7"
+                fill="freeze"
+                begin="start.begin"
+              />
+              <animate
+                dur="0.2s"
+                attributeName="d"
+                values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7"
+                fill="freeze"
+                begin="reverse.begin"
+              />
             </path>
             <rect width="10" height="10" stroke="none">
-              <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+              <animate
+                dur="2s"
+                id="reverse"
+                attributeName="width"
+                begin="click"
+              />
             </rect>
             <rect width="10" height="10" stroke="none">
-              <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
-              <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+              <animate
+                dur="0.001s"
+                id="start"
+                attributeName="width"
+                values="10;0"
+                fill="freeze"
+                begin="click"
+              />
+              <animate
+                dur="0.001s"
+                attributeName="width"
+                values="0;10"
+                fill="freeze"
+                begin="reverse.begin"
+              />
             </rect>
           </svg>
         </div>
@@ -186,7 +234,9 @@
               <div class="small-square"></div>
             </div>
 
-            <div class="div9"><div class="big-square"></div></div>
+            <div class="div9">
+              <div class="big-square"></div>
+            </div>
             <div class="div10">
               <div class="small-square"></div>
               <div class="small-square"></div>
@@ -213,7 +263,9 @@
         </div>
         <div class="lower-container">
           <div class="squares-container">
-            <div class="div1"><div class="small-square"></div></div>
+            <div class="div1">
+              <div class="small-square"></div>
+            </div>
             <div class="div2">
               <div class="small-square"></div>
               <div class="small-square"></div>
@@ -223,8 +275,12 @@
                 <img src="/assets/lamp-cog.png" alt="Lamp with cog image" />
               </div>
             </div>
-            <div class="div4"><div class="small-square"></div></div>
-            <div class="div5"><div class="small-square"></div></div>
+            <div class="div4">
+              <div class="small-square"></div>
+            </div>
+            <div class="div5">
+              <div class="small-square"></div>
+            </div>
           </div>
           <div class="welcome-to-esquare">
             <h1>Welcome to E square</h1>
@@ -277,7 +333,9 @@
             </p>
           </div>
           <div class="reason2">
-            <div class="pic"><img src="/assets/eye.png" alt="eye image" /></div>
+            <div class="pic">
+              <img src="/assets/eye.png" alt="eye image" />
+            </div>
             <h1>Craftsmanship Meets Vision</h1>
             <p>
               In a world awash with code, we see poetry. Our experts don't just
@@ -290,7 +348,9 @@
             </p>
           </div>
           <div class="reason3">
-            <div class="pic"><img src="/assets/cog.png" alt="cog image" /></div>
+            <div class="pic">
+              <img src="/assets/cog.png" alt="cog image" />
+            </div>
             <h1>A Symphony of Technology & Strategy</h1>
             <p>
               Our services are not mere offerings; they are movements in a grand
@@ -346,7 +406,104 @@
         </div>
       </section>
 
-      <section id="aboutUs"></section>
+      <section id="aboutUs">
+        <div class="title">About Us</div>
+
+        <div class="carousel-wrapper">
+          <div class="cards-container carousel">
+            <div class="our-journey card">
+              <div class="content-container">
+                <img src="assets/trail.png" alt="" />
+                <h3>Our Journey</h3>
+                <p>
+                  In the heart of the tech revolution, E Square was born—a
+                  beacon of innovation and a testament to the power of digital
+                  transformation. What began as a vision to demystify technology
+                  and make it accessible and impactful for businesses of all
+                  sizes has evolved into a leading force in the IT consulting
+                  and engineering landscape. Our journey is one of relentless
+                  pursuit of excellence, driven by the passion to empower
+                  businesses to not only envision their future but to seize it.
+                </p>
+              </div>
+              <div class="card-number">1</div>
+            </div>
+
+            <div class="our-mission card">
+              <div class="content-container">
+                <img src="assets/stairs-to-top.png" alt="" />
+                <h3>Our Mission</h3>
+                <p>
+                  At E Square, we're on a mission to unlock the potential within
+                  every business, transforming challenges into opportunities and
+                  ideas into realities. We believe in the transformative power
+                  of technology—not as an end, but as a means to a more
+                  innovative, efficient, and brighter future. Our mission is to
+                  guide businesses through the complexities of the digital age,
+                  ensuring they emerge stronger, more agile, and ready to lead.
+                </p>
+              </div>
+              <div class="card-number">2</div>
+            </div>
+
+            <div class="our-impact card">
+              <div class="content-container">
+                <img src="assets/loading-cog.png" alt="" />
+                <h3>Our Impact</h3>
+                <p>
+                  We measure our success by the impact we create: businesses
+                  transformed, innovations realized, and partnerships
+                  strengthened. From startups taking their first steps to
+                  traditional companies remaining their legacy in the digital
+                  world, E Square stands as a catalyst for change. Our impact
+                  echoes through the industries we serve, a testament to our
+                  commitment to excellence and our unwavering belief in the
+                  potential of our clients.
+                </p>
+              </div>
+              <div class="card-number">3</div>
+            </div>
+
+            <div class="our-values card">
+              <div class="content-container">
+                <img src="assets/science-heart.png" alt="" />
+                <h3>Our Values</h3>
+                <p>
+                  Innovation: We're driven by a desire to explore, to challenge
+                  the status quo, and to discover new horizons. Excellence: Our
+                  commitment to excellence is unwavering, reflected in the
+                  quality of our work and the results we deliver. Partnership:
+                  We believe in building relationships that go beyond projects,
+                  fostering collaboration and mutual growth. Empowerment: At our
+                  core is the belief in empowering our clients and our team,
+                  equipping them with the knowledge and tools to succeed.
+                </p>
+              </div>
+              <div class="card-number">4</div>
+            </div>
+
+            <div class="our-promise card">
+              <div class="content-container">
+                <img src="assets/holding-hands.png" alt="" />
+                <h3>Our Promise</h3>
+                <p>
+                  To our clients, our team, and our community, we promise to be
+                  more than just a company. E Square is a partner, a mentor, and
+                  a leader in the journey towards a digital tomorrow. We're
+                  dedicated to your success, committed to our values, and
+                  inspired by the possibilities of what we can achieve together.
+                  Welcome to E Square—where your digital future begins.
+                </p>
+              </div>
+              <div class="card-number">5</div>
+            </div>
+          </div>
+          <button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
 
       <section id="ourServices">
         <div class="title">Our Services</div>
@@ -396,7 +553,7 @@
         </div>
       </section>
 
-      <section id="angularTlv"></section>
+      <!-- <section id="angularTlv"></section> -->
 
       <section id="clients">
         <div class="title">Clients</div>
@@ -460,7 +617,9 @@
         <div class="title">Let's Connect!</div>
         <div class="form-graphics-container">
           <div class="left-side-squares-container">
-            <div class="col1"><div class="small-square"></div></div>
+            <div class="col1">
+              <div class="small-square"></div>
+            </div>
             <div class="col2">
               <div class="small-square"></div>
               <div class="small-square"></div>
@@ -472,14 +631,18 @@
               engineering and making your organization better then ever.
             </h1>
             <div class="contact-card">
-              <form class="contact-form">
+              <form class="contact-form" id="contactForm">
                 <div class="form-group">
                   <input
                     type="text"
                     id="first-name"
                     placeholder="First Name*"
                     required
+                    inputmode="text"
+                    pattern="[a-zA-Z ]+"
+                    title="First name should only contain letters."
                   />
+                  <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                   <input
@@ -487,7 +650,11 @@
                     id="last-name"
                     placeholder="Last Name*"
                     required
+                    inputmode="text"
+                    pattern="[a-zA-Z ]+"
+                    title="Last name should only contain letters."
                   />
+                  <span class="error-message"></span>
                 </div>
                 <div class="form-group">
                   <input
@@ -495,18 +662,33 @@
                     id="email"
                     placeholder="Email*"
                     required
+                    inputmode="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Please enter a valid email address."
+                  />
+                  <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="company"
+                    placeholder="Company"
+                    inputmode="text"
                   />
                 </div>
                 <div class="form-group">
-                  <input type="text" id="company" placeholder="Company" />
-                </div>
-                <div class="form-group">
-                  <input type="text" id="job-title" placeholder="Job Title" />
+                  <input
+                    type="text"
+                    id="job-title"
+                    placeholder="Job Title"
+                    inputmode="text"
+                  />
                 </div>
                 <div class="form-group">
                   <textarea
                     id="comments"
                     placeholder="Anything comes to your mind."
+                    inputmode="text"
                   ></textarea>
                 </div>
                 <div class="form-group">
@@ -541,7 +723,9 @@
               <div class="small-square"></div>
               <div class="small-square"></div>
             </div>
-            <div class="col2"><div class="small-square"></div></div>
+            <div class="col2">
+              <div class="small-square"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -568,7 +752,9 @@
           <h3>Subscribe</h3>
           <div class="input-button-container">
             <input type="text" placeholder="Get product updates" />
-            <button><img src="assets/icons/right-arrow.png" alt="" /></button>
+            <button>
+              <img src="assets/icons/right-arrow.png" alt="" />
+            </button>
           </div>
         </div>
       </div>
