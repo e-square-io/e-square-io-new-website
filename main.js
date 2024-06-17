@@ -115,3 +115,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const squares = document.querySelectorAll(".small-square");
+  const variations = [
+    "small-square",
+    "small-square-1",
+    "small-square-2",
+    "small-square-3",
+  ];
+
+  squares.forEach((square) => {
+    const randomVariation =
+      variations[Math.floor(Math.random() * variations.length)];
+    square.classList.add(randomVariation);
+  });
+});
