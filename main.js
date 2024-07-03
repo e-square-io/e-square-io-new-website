@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateCarousel();
 });
 
+
 document
   .getElementById("contactForm")
   .addEventListener("submit", function (event) {
@@ -82,8 +83,32 @@ document
     }
 
     if (isValid) {
-      this.submit(); // If everything is valid, submit the form
-    }
+      // Prepare form data
+      var formData = new FormData(this);
+      var data = {};
+      formData.forEach((value, key) => (data[key] = value));
+
+      // Send the form data to the Firebase function
+      fetch('https://<your-firebase-project>.cloudfunctions.net/sendMail', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ data }),
+      })
+      .then(response => response.json())
+      .then(response => {
+          if (response.data.success) {
+              alert('Email sent successfully!');
+          } else {
+              alert('Error sending email: ' + response.data.error);
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('Error sending email.');
+      });
+  }
   });
 
 function showError(input, message) {
