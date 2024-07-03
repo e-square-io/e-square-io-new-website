@@ -89,7 +89,7 @@ document
       formData.forEach((value, key) => (data[key] = value));
 
       // Send the form data to the Firebase function
-      fetch('https://<your-firebase-project>.cloudfunctions.net/sendMail', {
+      fetch('https://<E-Square-Idan>.cloudfunctions.net/sendMail', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
