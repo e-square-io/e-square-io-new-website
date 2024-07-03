@@ -1,3 +1,6 @@
+import "./styles.scss";
+
+// Function to control carousel
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
   const cards = document.querySelectorAll(".card");
@@ -103,6 +106,7 @@ function validateEmail(email) {
   return re.test(email);
 }
 
+// Function to control hamburger button
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger-image");
   const menu = document.querySelector(".menu");
@@ -116,6 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+// Function to generate random square classes
 document.addEventListener("DOMContentLoaded", function () {
   const squares = document.querySelectorAll(".small-square");
   const variations = [
@@ -131,3 +137,50 @@ document.addEventListener("DOMContentLoaded", function () {
     square.classList.add(randomVariation);
   });
 });
+
+ // Function to check if any part of an element is in the viewport
+ function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top < window.innerHeight &&
+    rect.bottom > 0
+  );
+}
+
+// Debounce function to limit the rate at which a function is called
+function debounce(func, wait) {
+  let timeout;
+  return function() {
+    const context = this, args = arguments;
+    const later = function() {
+      timeout = null;
+      func.apply(context, args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
+
+// Function to add 'active' class to the menu items based on the viewport
+function checkViewport() {
+  const menuItems = document.querySelectorAll('.menu li');
+  let activeFound = false;
+
+  menuItems.forEach(item => {
+    const section = document.querySelector(item.querySelector('a').getAttribute('href'));
+    if (section && isInViewport(section) && !activeFound) {
+      item.classList.add('active');
+      activeFound = true;
+    } else {
+      item.classList.remove('active');
+    }
+  });
+}
+
+// Debounced version of checkViewport
+const debouncedCheckViewport = debounce(checkViewport, 100);
+
+// Check viewport on load and on scroll
+window.addEventListener('load', debouncedCheckViewport);
+window.addEventListener('scroll', debouncedCheckViewport);
+window.addEventListener('resize', debouncedCheckViewport);
