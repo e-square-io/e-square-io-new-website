@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -10,26 +11,32 @@
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
+
   30% {
     -webkit-transform: scale3d(1.25, 0.75, 1);
     transform: scale3d(1.25, 0.75, 1);
   }
+
   40% {
     -webkit-transform: scale3d(0.75, 1.25, 1);
     transform: scale3d(0.75, 1.25, 1);
   }
+
   50% {
     -webkit-transform: scale3d(1.15, 0.85, 1);
     transform: scale3d(1.15, 0.85, 1);
   }
+
   65% {
     -webkit-transform: scale3d(0.95, 1.05, 1);
     transform: scale3d(0.95, 1.05, 1);
   }
+
   75% {
     -webkit-transform: scale3d(1.05, 0.95, 1);
     transform: scale3d(1.05, 0.95, 1);
   }
+
   100% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -40,6 +47,7 @@
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -65,6 +73,7 @@ header {
   width: 100%;
   background-color: #fff;
   text-align: right;
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -74,6 +83,7 @@ header {
   .company-icon {
     display: flex;
     align-items: center;
+
     &:hover {
       animation: jello-horizontal 0.9s both;
     }
@@ -111,8 +121,10 @@ header {
     color: black;
     text-decoration: none;
   }
+
   @media (max-width: 1400px) {
     height: auto;
+
     nav {
       flex-direction: column;
       align-items: center;
@@ -179,10 +191,12 @@ header {
   box-shadow: inset 0 0 10px rgba(236, 233, 233, 0.386),
     10px 10px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.8s;
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 4px 4px 13px 3px rgba(37, 211, 234, 0.3);
   }
+
   user-select: none;
 }
 
@@ -196,12 +210,10 @@ header {
   @extend .small-square;
   box-shadow: 10px 10px 25px 0px #00000014 inset;
   background: rgb(148, 148, 148);
-  background: linear-gradient(
-    140deg,
-    rgba(152, 151, 151, 0.3) 0%,
-    rgba(207, 207, 207, 0.2) 35%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
+  background: linear-gradient(140deg,
+      rgba(152, 151, 151, 0.3) 0%,
+      rgba(207, 207, 207, 0.2) 35%,
+      rgba(255, 255, 255, 0.1) 100%);
 }
 
 .small-square-2 {
@@ -230,11 +242,9 @@ header {
   align-items: center;
   font-size: 160px;
   font-weight: 800;
-  background: linear-gradient(
-    135.69deg,
-    rgba(90, 94, 157, 1) -46.68%,
-    rgba(197, 239, 238, 1) 87.12%
-  );
+  background: linear-gradient(135.69deg,
+      rgba(90, 94, 157, 1) -46.68%,
+      rgba(197, 239, 238, 1) 87.12%);
 
   background-clip: text;
   -webkit-background-clip: text;
@@ -249,6 +259,7 @@ header {
       mask-image: linear-gradient(to top, transparent, black);
       -webkit-mask-image: linear-gradient(to top, transparent, black);
     }
+
     100% {
       mask-image: none;
       -webkit-mask-image: none;
@@ -282,20 +293,25 @@ header {
     @extend .div-common;
     flex-direction: column;
   }
+
   .div2 {
     grid-area: 7 / 2 / 8 / 6;
     @extend .div-common;
   }
+
   .div3 {
     grid-area: 5 / 2 / 7 / 4;
   }
+
   .div4 {
     grid-area: 6 / 4 / 7 / 6;
     @extend .div-common;
   }
+
   .div5 {
     grid-area: 5 / 4 / 6 / 5;
   }
+
   .div6 {
     grid-area: 3 / 2 / 5 / 4;
     @extend .div-common;
@@ -311,31 +327,39 @@ header {
     @extend .div-common;
     flex-direction: column;
   }
+
   .div8 {
     grid-area: 5 / 6 / 8 / 7;
     @extend .div-common;
     flex-direction: column;
   }
+
   .div9 {
     grid-area: 1 / 4 / 3 / 6;
   }
+
   .div10 {
     grid-area: 3 / 5 / 6 / 6;
     @extend .div-common;
     flex-direction: column;
   }
+
   .div11 {
     grid-area: 7 / 5 / 8 / 6;
   }
+
   .div12 {
     grid-area: 5 / 4 / 6 / 5;
   }
+
   .div13 {
     grid-area: 3 / 4 / 4 / 5;
   }
+
   .div14 {
     grid-area: 2 / 3 / 3 / 4;
   }
+
   .div15 {
     grid-area: 1 / 1 / 2 / 4;
     @extend .div-common;
@@ -390,30 +414,37 @@ header {
     .div1 {
       grid-area: 2 / 1 / 3 / 2;
     }
+
     .div2 {
       grid-area: 1 / 2 / 2 / 4;
       @extend .div-common;
     }
+
     .div3 {
       grid-area: 2 / 2 / 4 / 4;
+
       .big-square {
         display: flex;
         justify-content: center;
         align-items: center;
+
         img {
           width: 150px;
           height: 150px;
         }
       }
     }
+
     .div4 {
       grid-area: 4 / 2 / 5 / 3;
     }
+
     .div5 {
       grid-area: 3 / 4 / 4 / 5;
     }
 
     .welcome-to-esquare {
+
       h1,
       h2 {
         width: 472px;
@@ -445,6 +476,7 @@ header {
       display: flex;
       justify-content: center;
       margin-top: 150px;
+
       img {
         width: 850px;
         height: auto;
@@ -463,6 +495,7 @@ header {
     .lower-container {
       align-items: center;
       margin: 90px 50px 0 50px;
+
       .squares-container {
         display: grid;
         grid-template-columns: repeat(4, 140px);
@@ -475,12 +508,15 @@ header {
       .div2 {
         grid-area: 1 / 1 / 1 / 3;
       }
+
       .div3 {
         grid-area: 2 / 1 / 3 / 3;
       }
+
       .div4 {
         grid-area: 3 / 1 / 4 / 2;
       }
+
       .squares-container {
         grid-template-columns: repeat(2, 140px);
         align-items: center;
@@ -498,6 +534,7 @@ header {
       .mobile-main-title-squares {
         display: none;
       }
+
       img {
         width: 650px;
       }
@@ -520,6 +557,7 @@ header {
     p {
       text-align: center;
     }
+
     p {
       padding-inline: 10%;
     }
@@ -583,10 +621,12 @@ header {
     align-items: center;
     row-gap: 32px;
     column-gap: 32px;
+
     div[class^="reason"] {
       padding: 56px;
       font-size: 16px;
       transition: 0.25s ease-in-out all;
+
       &:hover {
         border-radius: 32px;
         box-shadow: 4px 4px 13px 3px rgba(37, 211, 234, 0.3);
@@ -603,10 +643,12 @@ header {
       opacity: 0.5;
     }
   }
+
   .pic {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+
     img {
       width: 100px;
       height: 92px;
@@ -615,6 +657,7 @@ header {
 
   @media (max-width: 1400px) {
     margin-inline: 20px;
+
     .title {
       font-size: 160px;
     }
@@ -645,6 +688,7 @@ header {
 
   @media (max-width: 768px) {
     margin-top: 50px;
+
     .title {
       height: auto;
       font-size: 45px;
@@ -665,19 +709,16 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/assets/backgrounds/clients-aboutus-background.png")
-      no-repeat center center;
+    background: url("/assets/backgrounds/clients-aboutus-background.png") no-repeat center center;
     background-size: cover;
     transform: rotate(180deg);
     z-index: -1;
   }
 
   .title {
-    background: linear-gradient(
-      141.25deg,
-      rgba(90, 94, 157, 0.2) 24.97%,
-      rgba(197, 239, 238, 0.2) 151.45%
-    );
+    background: linear-gradient(141.25deg,
+        rgba(90, 94, 157, 0.2) 24.97%,
+        rgba(197, 239, 238, 0.2) 151.45%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -843,10 +884,12 @@ header {
       padding: 56px;
       font-size: 16px;
       transition: 0.25s ease-in-out all;
+
       &:hover {
         border-radius: 32px;
         box-shadow: 4px 4px 13px 3px rgba(37, 211, 234, 0.3);
       }
+
       h1 {
         font-size: 20px;
         font-weight: 400;
@@ -888,6 +931,7 @@ header {
 
   @media (max-width: 768px) {
     margin-inline: 20px;
+
     .title {
       font-size: 50px;
     }
@@ -916,19 +960,16 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/assets/backgrounds/clients-aboutus-background.png")
-      no-repeat center center;
+    background: url("/assets/backgrounds/clients-aboutus-background.png") no-repeat center center;
     background-size: cover;
     transform: rotate(180deg);
     z-index: -1;
   }
 
   .title {
-    background: linear-gradient(
-      141.25deg,
-      rgba(90, 94, 157, 0.2) 24.97%,
-      rgba(197, 239, 238, 0.2) 151.45%
-    );
+    background: linear-gradient(141.25deg,
+        rgba(90, 94, 157, 0.2) 24.97%,
+        rgba(197, 239, 238, 0.2) 151.45%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -939,6 +980,7 @@ header {
     display: grid;
     justify-content: center;
     user-select: none;
+
     div {
       transition: filter ease-in-out 0.1s;
       transition-delay: 0.2s;
@@ -972,72 +1014,71 @@ header {
 
   .clients-container .row1-slide:hover div,
   .clients-container .row2-slide:hover div {
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4955%)
-      hue-rotate(359deg) brightness(95%) contrast(79%);
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(4955%) hue-rotate(359deg) brightness(95%) contrast(79%);
   }
+
   .clients-container .row1-slide .client1:hover {
-    filter: brightness(0) saturate(100%) invert(60%) sepia(45%) saturate(1969%)
-      hue-rotate(1deg) brightness(106%) contrast(104%);
+    filter: brightness(0) saturate(100%) invert(60%) sepia(45%) saturate(1969%) hue-rotate(1deg) brightness(106%) contrast(104%);
   }
+
   .clients-container .row1-slide .client2:hover {
-    filter: brightness(0) saturate(100%) invert(85%) sepia(46%) saturate(1278%)
-      hue-rotate(68deg) brightness(91%) contrast(124%);
+    filter: brightness(0) saturate(100%) invert(85%) sepia(46%) saturate(1278%) hue-rotate(68deg) brightness(91%) contrast(124%);
   }
+
   .clients-container .row1-slide .client3:hover {
-    filter: brightness(0) saturate(100%) invert(12%) sepia(74%) saturate(7114%)
-      hue-rotate(359deg) brightness(100%) contrast(106%);
+    filter: brightness(0) saturate(100%) invert(12%) sepia(74%) saturate(7114%) hue-rotate(359deg) brightness(100%) contrast(106%);
   }
+
   .clients-container .row1-slide .client4:hover {
-    filter: brightness(0) saturate(100%) invert(9%) sepia(24%) saturate(7490%)
-      hue-rotate(226deg) brightness(104%) contrast(123%);
+    filter: brightness(0) saturate(100%) invert(9%) sepia(24%) saturate(7490%) hue-rotate(226deg) brightness(104%) contrast(123%);
   }
+
   .clients-container .row1-slide .client5:hover {
-    filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(4735%)
-      hue-rotate(334deg) brightness(111%) contrast(91%);
+    filter: brightness(0) saturate(100%) invert(10%) sepia(95%) saturate(4735%) hue-rotate(334deg) brightness(111%) contrast(91%);
   }
+
   .clients-container .row1-slide .client6:hover {
-    filter: brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(6847%)
-      hue-rotate(278deg) brightness(72%) contrast(116%);
+    filter: brightness(0) saturate(100%) invert(16%) sepia(99%) saturate(6847%) hue-rotate(278deg) brightness(72%) contrast(116%);
   }
+
   .clients-container .row1-slide .client7:hover {
-    filter: brightness(0) saturate(100%) invert(12%) sepia(74%) saturate(7114%)
-      hue-rotate(359deg) brightness(100%) contrast(106%);
+    filter: brightness(0) saturate(100%) invert(12%) sepia(74%) saturate(7114%) hue-rotate(359deg) brightness(100%) contrast(106%);
   }
+
   .clients-container .row1-slide .client8:hover {
-    filter: brightness(0) saturate(100%) invert(99%) sepia(98%) saturate(6886%)
-      hue-rotate(9deg) brightness(108%) contrast(105%);
+    filter: brightness(0) saturate(100%) invert(99%) sepia(98%) saturate(6886%) hue-rotate(9deg) brightness(108%) contrast(105%);
   }
+
   .clients-container .row2-slide .client1:hover {
-    filter: brightness(0) saturate(100%) invert(12%) sepia(74%) saturate(7114%)
-      hue-rotate(359deg) brightness(100%) contrast(106%);
+    filter: brightness(0) saturate(100%) invert(12%) sepia(74%) saturate(7114%) hue-rotate(359deg) brightness(100%) contrast(106%);
   }
+
   .clients-container .row2-slide .client2:hover {
-    filter: brightness(0) saturate(100%) invert(3%) sepia(5%) saturate(292%)
-      hue-rotate(314deg) brightness(94%) contrast(88%);
+    filter: brightness(0) saturate(100%) invert(3%) sepia(5%) saturate(292%) hue-rotate(314deg) brightness(94%) contrast(88%);
   }
+
   .clients-container .row2-slide .client3:hover {
-    filter: brightness(0) saturate(100%) invert(43%) sepia(92%) saturate(5611%)
-      hue-rotate(224deg) brightness(89%) contrast(97%);
+    filter: brightness(0) saturate(100%) invert(43%) sepia(92%) saturate(5611%) hue-rotate(224deg) brightness(89%) contrast(97%);
   }
+
   .clients-container .row2-slide .client4:hover {
-    filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(7447%)
-      hue-rotate(264deg) brightness(87%) contrast(91%);
+    filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(7447%) hue-rotate(264deg) brightness(87%) contrast(91%);
   }
+
   .clients-container .row2-slide .client5:hover {
-    filter: brightness(0) saturate(100%) invert(15%) sepia(47%) saturate(4901%)
-      hue-rotate(236deg) brightness(93%) contrast(130%);
+    filter: brightness(0) saturate(100%) invert(15%) sepia(47%) saturate(4901%) hue-rotate(236deg) brightness(93%) contrast(130%);
   }
+
   .clients-container .row2-slide .client6:hover {
-    filter: brightness(0) saturate(100%) invert(27%) sepia(33%) saturate(2009%)
-      hue-rotate(324deg) brightness(112%) contrast(98%);
+    filter: brightness(0) saturate(100%) invert(27%) sepia(33%) saturate(2009%) hue-rotate(324deg) brightness(112%) contrast(98%);
   }
+
   .clients-container .row2-slide .client7:hover {
-    filter: brightness(0) saturate(100%) invert(60%) sepia(33%) saturate(4578%)
-      hue-rotate(150deg) brightness(97%) contrast(99%);
+    filter: brightness(0) saturate(100%) invert(60%) sepia(33%) saturate(4578%) hue-rotate(150deg) brightness(97%) contrast(99%);
   }
+
   .clients-container .row2-slide .client8:hover {
-    filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(6831%)
-      hue-rotate(6deg) brightness(108%) contrast(119%);
+    filter: brightness(0) saturate(100%) invert(15%) sepia(100%) saturate(6831%) hue-rotate(6deg) brightness(108%) contrast(119%);
   }
 
   @media (max-width: 1400px) {
@@ -1073,6 +1114,7 @@ header {
 
   @media (max-width: 768px) {
     padding-block: 20px;
+
     .title {
       font-size: 100px;
     }
@@ -1124,6 +1166,7 @@ header {
       flex-direction: column;
       gap: 1rem;
     }
+
     .col2 {
       grid-area: 5 / 1 / 6 / 2;
     }
@@ -1146,6 +1189,7 @@ header {
       width: 100%;
 
       .form-group {
+
         input,
         textarea {
           width: 97%;
@@ -1212,12 +1256,10 @@ header {
       border-radius: 3rem;
       position: relative;
       overflow: hidden;
-      background: linear-gradient(
-        90deg,
-        #ebfbfb 0%,
-        #e9eaf2 78.5%,
-        #c9cadf 100%
-      );
+      background: linear-gradient(90deg,
+          #ebfbfb 0%,
+          #e9eaf2 78.5%,
+          #c9cadf 100%);
 
       &::before {
         content: "";
@@ -1226,8 +1268,7 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        background: url("/assets/backgrounds/clients-aboutus-background.png")
-          no-repeat center center;
+        background: url("/assets/backgrounds/clients-aboutus-background.png") no-repeat center center;
         background-size: cover;
         transform: rotate(180deg);
         z-index: -1;
@@ -1236,6 +1277,7 @@ header {
       img {
         width: 50px;
       }
+
       .email,
       .phone,
       .address {
@@ -1258,9 +1300,11 @@ header {
 
   @media (max-width: 1200px) {
     margin-inline: 50px;
+
     .title {
       font-size: 140px;
     }
+
     .left-side-squares-container {
       display: none;
     }
@@ -1268,6 +1312,7 @@ header {
 
   @media (max-width: 768px) {
     margin-inline: 10px;
+
     .title {
       font-size: 50px;
     }
@@ -1297,8 +1342,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("/assets/backgrounds/clients-aboutus-background.png")
-      no-repeat center center;
+    background: url("/assets/backgrounds/clients-aboutus-background.png") no-repeat center center;
     background-size: cover;
     transform: rotate(180deg);
     z-index: -1;
@@ -1412,6 +1456,7 @@ footer {
     .reserved-rights {
       display: flex;
       align-items: center;
+
       p {
         font-size: 12px;
       }
