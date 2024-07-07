@@ -48,16 +48,34 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCarousel();
 });
 
-document
-    .getElementById("contactForm")
-    .addEventListener("submit", function (event) {
+// Function to control form submitting
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const successMessage = document.getElementById("successMessage");
+
+    // Check if the event listener is already added
+    if (form.dataset.listenerAttached) {
+        return;
+    }
+    form.dataset.listenerAttached = true;
+
+    // Flag to prevent multiple submissions
+    let isSubmitting = false;
+
+    form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent the form from submitting until it's validated
 
-        var isValid = true;
-        var firstName = document.getElementById("first-name");
-        var lastName = document.getElementById("last-name");
-        var email = document.getElementById("email");
-        var msg = document.getElementById("comments");
+        if (isSubmitting) {
+            return; // If already submitting, do nothing
+        }
+
+        let isValid = true;
+        const firstName = document.getElementById("first-name");
+        const lastName = document.getElementById("last-name");
+        const email = document.getElementById("email");
+        const companyName = document.getElementById("company");
+        const jobTitle = document.getElementById("job-title");
+        const msg = document.getElementById("comments");
 
         // Validate First Name
         if (!firstName.value.trim()) {
@@ -84,11 +102,16 @@ document
         }
 
         if (isValid) {
+            // Set the flag to true to prevent multiple submissions
+            isSubmitting = true;
+
             // Prepare form data
-            var data = {
+            const data = {
                 firstName: firstName.value,
                 lastName: lastName.value,
                 email: email.value,
+                companyName: companyName.value,
+                jobTitle: jobTitle.value,
                 msg: msg.value,
             };
 
@@ -105,34 +128,46 @@ document
             )
                 .then((response) => response.text())
                 .then((response) => {
-                    alert("Email sent successfully!");
+                    console.log("Email sent successfully:", response);
+                    successMessage.style.display = "block"; // Show the success message
+                    successMessage.textContent =
+                        "Thanks for reaching out! We will contact you soon.";
+
+                    // Reset the flag after successful submission
+                    isSubmitting = false;
                 })
                 .catch((error) => {
                     console.error("Error:", error);
                     alert("Error sending email.");
+
+                    // Reset the flag in case of an error
+                    isSubmitting = false;
                 });
+        } else {
+            console.log("Form validation failed, not sending data");
         }
     });
 
-function showError(input, message) {
-    var container = input.parentElement;
-    var error = container.querySelector(".error-message");
-    error.textContent = message;
-    error.style.color = "red";
-    input.style.borderColor = "red";
-}
+    function showError(input, message) {
+        const container = input.parentElement;
+        const error = container.querySelector(".error-message");
+        error.textContent = message;
+        error.style.color = "red";
+        input.style.borderColor = "red";
+    }
 
-function clearError(input) {
-    var container = input.parentElement;
-    var error = container.querySelector(".error-message");
-    error.textContent = "";
-    input.style.borderColor = "";
-}
+    function clearError(input) {
+        const container = input.parentElement;
+        const error = container.querySelector(".error-message");
+        error.textContent = "";
+        input.style.borderColor = "";
+    }
 
-function validateEmail(email) {
-    var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+});
 
 // Function to control hamburger button
 document.addEventListener("DOMContentLoaded", function () {

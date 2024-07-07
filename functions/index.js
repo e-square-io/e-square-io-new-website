@@ -19,15 +19,32 @@ const mailTransport = nodemailer.createTransport({
 
 exports.sendEmail = functions.https.onRequest((req, res) => {
     cors(req, res, () => {
-        console.log("Request received:", req.body);
-        const { firstName, lastName, email, msg } = req.body;
+        if (req.method !== "POST") {
+            return res.status(405).send("Method Not Allowed");
+        }
+
+        const { firstName, lastName, email, companyName, jobTitle, msg } =
+            req.body;
+
+        if (!firstName || !lastName || !email || !msg) {
+            return res.status(400).send("All fields are required");
+        }
 
         const mailOptions = {
             from: gmailEmail,
             to: "eliran@e-square.io",
             subject: `Message from ${firstName} ${lastName}`,
             text: msg,
-            html: `<p>${msg}</p>`,
+            html: `
+            <ul>
+                <li>First Name: ${firstName}</li>
+                <li>Last Name: ${lastName}</li>
+                <li>Email: ${email}</li>
+                <li>Company Name: ${companyName}</li>
+                <li>Job Title: ${jobTitle}</li>
+            </ul>
+            <p>${msg}</p>
+            `,
         };
 
         mailTransport.sendMail(mailOptions, (error, info) => {
@@ -36,10 +53,10 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
                     "There was an error while sending the email:",
                     error
                 );
-                res.status(500).send("Error sending email");
+                return res.status(500).send("Error sending email");
             } else {
                 console.log("Email sent:", info.response);
-                res.status(200).send("Email sent successfully");
+                return res.status(200).send("Email sent successfully");
             }
         });
     });

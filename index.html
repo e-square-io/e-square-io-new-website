@@ -6,12 +6,9 @@
   <title>E-Square</title>
   <base href="/" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- <link rel="stylesheet" href="styles.css" /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <script src="./main.js" defer></script>
 </head>
 
 <body>
@@ -626,7 +623,7 @@
               </div>
               <div class="form-group">
                 <input type="email" id="email" name="email" placeholder="Email*" required inputmode="email"
-                  pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" title="Please enter a valid email address." />
+                  title="Please enter a valid email address." />
                 <span class="error-message"></span>
               </div>
               <div class="form-group">
@@ -642,6 +639,9 @@
               <div class="form-group">
                 <button type="submit">Submit</button>
               </div>
+              <div id="successMessage"
+                style="display:none; color: green; margin-top: 10px; font-size: 1rem; text-align: center;">
+                Thanks for reaching out! We will contact you soon.</div>
             </form>
             <div class="contact-info">
               <div class="info-title">Info</div>
