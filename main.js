@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Send the form data to the Firebase function
             fetch(
-                "https://us-central1-e-square-idan.cloudfunctions.net/sendEmail",
+                "https://us-central1-e-square-io-v2.cloudfunctions.net/sendEmail",
                 {
                     method: "POST",
                     headers: {

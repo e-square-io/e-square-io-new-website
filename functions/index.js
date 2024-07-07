@@ -32,7 +32,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
 
         const mailOptions = {
             from: gmailEmail,
-            to: "idan8122@gmail.com",
+            to: "eliran@e-square.io",
             subject: `Message from ${firstName} ${lastName}`,
             text: msg,
             html: `
