@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="225" height="25" viewBox="0 0 225 25">
+    <defs>
+        <linearGradient id="a" x1="0%" x2="76.916%" y1="-32.676%" y2="123.024%">
+            <stop offset="0%" stop-color="#272A7F"/>
+            <stop offset="100%" stop-color="#35DCD8"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <text fill="#FFF" font-family="SpaceGrotesk-Bold, Space Grotesk" font-size="32.941" font-weight="bold" letter-spacing="8.369" transform="translate(-1 -9)">
+            <tspan x="0" y="32.314">E</tspan> <tspan x="26.553" y="32.314">-</tspan> <tspan x="50.075" y="32.314" letter-spacing="11.506">S </tspan> <tspan x="122.277" y="32.314">UARE</tspan>
+        </text>
+        <path stroke="url(#a)" stroke-width="4.471" d="M103.662 11.647H84.588v19.059h24.55v-.217h-5.476V11.647z" transform="translate(-1 -9)"/>
+    </g>
+</svg>
