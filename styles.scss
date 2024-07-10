@@ -571,7 +571,6 @@ header {
     .upper-container-mobile {
       img {
         width: 350px;
-        height: fit-content;
       }
 
       .mobile-main-title-squares {
@@ -1365,6 +1364,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
 
   a {
